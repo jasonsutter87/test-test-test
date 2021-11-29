@@ -20,7 +20,7 @@ collections:
     files:
       - label: "Companies Websites We Built"
         name: "CompaniesWebsitesWeBuilt"
-        file: "data/home/companiessitsewebuilt.toml"
+        file: "data/posts.json"
         widget: "list"
         fields:
           - {label: Title, name: title, widget: string}
