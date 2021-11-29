@@ -59,7 +59,10 @@ collections:
   #Blog
   - label: "Blog" # Used in the UI
     name: "blogPages" # Used in routes, e.g., /admin/collections/blog
-    folder: "content/blog" # The path to the folder where the documents are stored
+    # folder: "content/blog" # The path to the folder where the documents are stored
+    extension: "json"
+    create: true # Allow users to create new documents in this collection
+    file: "data/posts.json"
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
