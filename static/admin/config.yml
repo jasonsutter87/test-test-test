@@ -13,19 +13,19 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 
 collections:
-    - label: "Homepage - Companies Websites We Built" # Used in the UI
-      name: "indexPage " # Used in routes, e.g., /admin/collections/blog
-      description: "index page"
-      create: false # Allow users to create new documents in this collection
-      files:
-        - label: "Companies Websites We Built"
-          name: "CompaniesWebsitesWeBuilt"
-          file: "data/home/companiessitsewebuilt.toml"
-          fields:
-            - label: "Companies"
-              name: "companies"
-              widget: "list"
-              fields:
-                - {label: Url, name: url, widget: string}
-                - {label: Alt, name: alt, widget: string}
-                - {label: Image, name: image, widget: image}
+  - label: "Homepage - Companies Websites We Built" # Used in the UI
+    name: "indexPage " # Used in routes, e.g., /admin/collections/blog
+    description: "index page"
+    create: true # Allow users to create new documents in this collection
+    files:
+      - label: "CompaniesWebsitesWeBuilt"
+        name: "CompaniesWebsitesWeBuilt"
+        file: "data/home/companiessitsewebuilt.toml"
+        fields:
+          - label: "Companies"
+            name: "companies"
+            widget: "list"
+            fields:
+              - {label: Url, name: url, widget: string}
+              - {label: Alt, name: alt, widget: string}
+              - {label: Image, name: image, widget: image}
