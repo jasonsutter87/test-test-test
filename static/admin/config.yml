@@ -47,6 +47,5 @@ collections:
             name: "companies"
             widget: "list"
             fields:
-              - {label: Url, name: url, widget: string}
-              - {label: Alt, name: alt, widget: string}
+              - {label: Name, name: name, widget: string}
               - {label: Image, name: image, widget: image}
