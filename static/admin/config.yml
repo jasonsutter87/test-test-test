@@ -13,19 +13,36 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 
 collections:
-  - label: "Homepage - Companies Websites We Built" # Used in the UI
-    name: "indexPage " # Used in routes, e.g., /admin/collections/blog
-    description: "index page"
-    create: true # Allow users to create new documents in this collection
-    files:
-      - label: "CompaniesWebsitesWeBuilt"
-        name: "CompaniesWebsitesWeBuilt"
-        file: "data/home/companiessitsewebuilt.json"
-        fields:
-          - label: "Companies"
-            name: "companies"
-            widget: "list"
+    - name: 'team'
+      label: 'Team Members'
+      label_singular: 'Team Member'
+      editor:
+          preview: false
+      delete: false
+      preview_path: 'team'
+      files:
+          - label: 'Members'
+            name: 'members'
+            file: 'data/teamMembers.json'
             fields:
-              - {label: Url, name: url, widget: string}
-              - {label: Alt, name: alt, widget: string}
-              - {label: Image, name: image, widget: image}
+                - label: Members
+                  name: members
+                  widget: list
+                  allow_add: true
+                  fields:
+                      - { label: 'Name', name: 'name', widget: 'string' }
+                      - label: 'Image'
+                        name: 'image'
+                        widget: 'object'
+                        fields:
+                            - { label: 'Photo', name: 'main', widget: 'image' }
+                            - { label: 'Photo Alt', name: 'alt', widget: 'image' }
+                      - { label: 'Position', name: 'position', widget: 'string' }
+                      - { label: 'Bio', name: 'bio', widget: 'string' }
+                      - { label: 'Background', name: 'background', widget: 'string' }
+                      - label: 'Social'
+                        name: 'social'
+                        widget: 'list'
+                        fields:
+                            - { label: 'Name', name: 'name', widget: 'string' }
+                            - { label: 'Link', name: 'link', widget: 'string' }
