@@ -20,7 +20,7 @@ collections:
     files:
       - label: "Companies Websites We Built"
         name: "CompaniesWebsitesWeBuilt"
-        file: "data/sample.json"
+        file: "data/home/companiessitsewebuilt.toml"
         fields:
           - label: "Companies"
             name: "companies"
