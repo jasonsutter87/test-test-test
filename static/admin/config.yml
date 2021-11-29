@@ -21,11 +21,8 @@ collections:
       - label: "Companies Websites We Built"
         name: "CompaniesWebsitesWeBuilt"
         file: "data/home/companiessitsewebuilt.toml"
+        widget: "list"
         fields:
-          - label: "Companies"
-            name: "companies"
-            widget: "list"
-            fields:
-              - {label: Title, name: urTitlel, widget: string}
-              - {label: Url, name: Url, widget: string}
-              - {label: thumbnailUrl, name: thumbnailUrl, widget: image}
+          - {label: Title, name: title, widget: string}
+          - {label: Url, name: Url, widget: string}
+          - {label: thumbnailUrl, name: thumbnailUrl, widget: image}
