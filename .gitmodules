@@ -1,0 +1,3 @@
+[submodule "themes/chunkyPoster"]
+	path = themes/chunkyPoster
+	url = https://github.com/GROWDND/GrowHugoChunkyPoster.git

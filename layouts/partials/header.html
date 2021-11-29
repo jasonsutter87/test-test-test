@@ -1,0 +1,175 @@
+{{ $current := . }}
+<div class="container-fluid main-navigation d-lg-none ">
+   <nav class="w-100">
+        <div class="row justify-content-between align-items-center mobile-navigation-row">
+            <div class="col">
+                 <a href="/" class="header-logo">
+                   <img src="/images/assets/brand/1687-logo.svg" alt="1687 logo">
+                </a>
+            </div>
+
+            <div class="col-auto">
+                <button class="btn-reset px-0 nav-menu-toggle-btn nav-btn-open" id="open-mobile-nav">
+                    <i class="fal fa-bars"></i>
+                     <span class="sr-only">open-mobile-nav</span>
+                </button>
+                <button class="btn-reset px-0 nav-menu-toggle-btn nav-btn-close" id="close-mobile-nav">
+                    <i class="fal fa-times nav-menu-toggle-btn"></i>
+                     <span class="sr-only">close-mobile-nav</span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+<nav class="navbar navbar-expand-md d-none d-lg-flex" id="navbar-main-menu">
+    <div class="site-container-1200 d-none d-lg-block">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-auto">
+          <a href="{{ .Site.BaseURL }}" class="nav-logo">
+            <img src="/images/assets/brand/1687-logo.svg" alt="1687 logo">
+
+            <p class="sr-only">1687 logo</p>
+
+          </a>
+
+          <ul class="ul-reset d-inline-flex align-items-center">
+            <!-- <li class="nav-menu-item">
+              <a href="/the-club" class="nav-menu-link">The Club</a>
+            </li> -->
+            <li class="nav-menu-item">
+              <a href="/nft" class="nav-menu-link">NFT</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="/roadmap" class="nav-menu-link">Roadmap</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="/gallery" class="nav-menu-link">Gallery</a>
+            </li>
+            <!-- <li class="nav-menu-item">
+              <a href="/provenance" class="nav-menu-link">Provenance</a>
+            </li> -->
+            <li class="nav-menu-item">
+              <a href="/faq" class="nav-menu-link">FAQ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="/request-access" class="nav-menu-button">Request Access</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-auto d-inline-flex align-self-stretch py-2">
+          <div class="nav-social-menu-left">
+            <ul class="ul-reset d-inline-flex align-item-center">
+              <li class="nav-social-item">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                  <span class="sr-only">instagram social link</span>
+                </a>
+              </li>
+              <li class="nav-social-item">
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                  <span class="sr-only">twitter social link</span>
+                </a>
+              </li>
+              <li class="nav-social-item">
+                <a href="https://www.youtube.com/" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="sr-only">youtube social link</span>
+                </a>
+              </li>
+              <li class="nav-social-item">
+                <a href="https://discord.com/" target="_blank">
+                  <i class="fab fa-discord"></i>
+                  <span class="sr-only">discord social link</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-social-menu-right">
+            <ul class="ul-reset d-inline-flex align-item-center">
+              <li class="nav-social-item">
+                <a href="/sign-in">
+                  <i class="fal fa-sign-in"></i>
+                  <span class="sr-only">discord social link</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+
+
+
+
+<nav>
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="site-container-992">
+      <div class="row">
+        <div class="col-12 mobile-inner-menu-size pt-5">
+
+
+
+          <ul class="ul-reset">
+
+
+            <li class="nav-menu-item pb-4">
+              <a href="/request-access" class="btn-primary">Request Access</a>
+            </li>
+
+            <li class="mobile-nav-menu-item d-flex align-items-center justify-content-between">
+                <a href="/nft" class="text-uppercase">NFT</a>
+            </li>
+
+            <li class="mobile-nav-menu-item d-flex align-items-center justify-content-between">
+                <a href="/roadmap" class="text-uppercase">Roadmap</a>
+            </li>
+
+            <li class="mobile-nav-menu-item d-flex align-items-center justify-content-between">
+                <a href="/faq" class="text-uppercase" >FAQ</a>
+            </li>
+
+            <li class="mobile-nav-menu-item">
+                <a href="/sign-in" class="text-uppercase  d-flex align-items-center" ><i class="fal fa-sign-in"></i>&nbsp; Sign In</a>
+            </li>
+          </ul>
+          <ul class="ul-reset d-inline-flex align-item-center align-self-end h-80">
+            <li class="nav-social-item">
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span class="sr-only">instagram social link</span>
+              </a>
+            </li>
+            <li class="nav-social-item">
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter"></i>
+                <span class="sr-only">twitter social link</span>
+              </a>
+            </li>
+            <li class="nav-social-item">
+              <a href="https://www.youtube.com/" target="_blank">
+                <i class="fab fa-youtube"></i>
+                <span class="sr-only">youtube social link</span>
+              </a>
+            </li>
+            <li class="nav-social-item">
+              <a href="https://discord.com/" target="_blank">
+                <i class="fab fa-discord"></i>
+                <span class="sr-only">discord social link</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</nav>

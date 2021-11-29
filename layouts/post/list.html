@@ -1,0 +1,80 @@
+{{ define "main" }}
+    <section id="inner-jumbotron-section">
+      <div class="site-container-1400">
+        <div class="row">
+          <div class="col-12 ">
+            <h1 class="h1-heading">Blog</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+      <!-- Index main content -->
+      <div class="superlight-bg py-5">
+
+        <div class="text-center">
+
+          <h1>Blog count: {{ len (where .Site.RegularPages "Section" "post") }}.</h1>
+
+          <form action="/post">
+            <label for="cars">Choose a gender:</label>
+            <select name="genders" id="genders">
+              <option value="">Please select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <br><br>
+
+            <label for="cars">Choose a color:</label>
+            <select name="color" id="colors">
+              <option value="">Please select</option>
+              <option value="volvo">grey</option>
+              <option value="saab">brown</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Submit" class="btn-primary" id="filterResults">
+          </form>
+
+          {{ $url := urls.Parse "/" }}
+          <p>{{ $url.Host  }}</p>
+        </div>
+        <!-- Web Development -->
+        <section class="blog-page-section">
+          <div class="site-container-1400 p-3">
+            <div class="row row-cols-1 row-cols-lg-3">
+              <!-- {{ range .Pages }}
+              <div class="col mb-3">
+                {{ .Render "card" }}
+              </div>
+              {{ end }} -->
+
+              {{ range .Site.Data.posts }}
+                {{ .title }}<br><br><br>
+              {{ end }}
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <script type="text/javascript">
+        setTimeout(() => {
+          console.log('ready-posts')
+          $(function(){
+            $('#filterResults').on('click', e =>{
+              e.preventDefault();
+              console.log('clicking results')
+              $('.blog-page-section').append('asdfas')
+            })
+          })
+
+
+        }, 500)
+
+
+      </script>
+{{ end }}

@@ -1,0 +1,161 @@
+---
+title: "Gallery"
+summary: "Gallery summary"
+description: "Gallery description"
+image: "/images/assets/brand/1687-share.jpg"
+priority: 0.8
+---
+
+
+<section class="inner-roadmap-section">
+  <div class="site-container-1200">
+    <div class="row">
+      <div class="col-auto pt-lg-5">
+        <h1 class="title-text pb-30">Gallery</h1>
+      </div>
+    </div>
+
+
+    <div class="row gallery-viewer">
+        <div class="col-12 col-lg-4">
+          <select class="gallery-select form-select h4-headin gallery-albumId" aria-label="albumId">
+          </select>
+
+          <div class="py-3">
+            <button type="button" name="button" id="reset-filter" class="btn-primary w-100">Reset Filters</button>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-lg-8">
+          <div class="row gallery-row"></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  setTimeout(function(){
+    $(function () {
+        // Filter albumId
+        let CurrentAlbum = 1;
+        $('.gallery-albumId').append(`<option value="0" selected>Cat Album</option>`)
+        for(var i = 1; i < 5; i++) {
+          $('.gallery-albumId').append(`<option value="${i}">Album: ${i}</option>`)
+        }
+
+
+
+
+        let cats = [
+          {
+            "id": 1,
+            "title": "1687 #1",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-1.jpg"
+          },
+          {
+            "id": 2,
+            "title": "1687 #2",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-2.jpg"
+          },
+          {
+            "id": 3,
+            "title": "1687 #3",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-3.jpg"
+          },
+          {
+            "id": 4,
+            "title": "1687 #4",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-4.jpg"
+          },
+          {
+            "id": 5,
+            "title": "1687 #5",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-5.jpg"
+          },
+          {
+            "id": 6,
+            "title": "1687 #6",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-6.jpg"
+          },
+          {
+            "id": 7,
+            "title": "1687 #7",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-7.jpg"
+          },
+          {
+            "id": 8,
+            "title": "1687 #8",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-8.jpg"
+          },
+          {
+            "id": 9,
+            "title": "1687 #9",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "/images/assets/nfts/female-cat-9.jpg"
+          }
+
+
+        ]
+
+        //initizeGallery
+        let initizeGallery = (albumId) => {
+          console.log(`initizeGallery with gallery is: ${albumId}`)
+
+          $.each(cats, function (index, value) {
+              $('.gallery-row').append(`<div class="col-12 col-lg-4 gallery-img-div">
+                 <a href="#">
+                   <img src="${value.thumbnailUrl}" alt="${value.title}">
+                   <p>${value.title}</p>
+                 </a>
+               </div`)
+          })
+
+         //  $.ajax({
+         //     url: `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`,
+         //     contentType: "application/json",
+         //     dataType: 'json',
+         //     success: function (data) {
+         //
+         //     }
+         // })
+        }
+
+        //runner
+        initizeGallery(CurrentAlbum)
+
+      //on gallary change filter
+      $('.gallery-albumId').on('change', function(e) {
+           e.preventDefault();
+           CurrentAlbum = $('.gallery-albumId').val()
+           $('.gallery-row').empty()
+           initizeGallery(CurrentAlbum)
+       })
+
+
+
+       //reset Filter
+       $('#reset-filter').on('click', function(e) {
+            e.preventDefault();
+            //empty grid
+            $('.gallery-row').empty()
+
+            //set the filter to default
+            $('.gallery-albumId').val(0)
+
+            //perform reset
+            CurrentAlbum = 1;
+            initizeGallery(CurrentAlbum)
+        })
+    })
+  }, 500);
+</script>

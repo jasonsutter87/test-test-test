@@ -1,0 +1,51 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = ''
+theme  = "chunkyPoster"
+enableRobotsTXT = true
+
+
+[menu]
+  [[menu.main]]
+    identifier = "Nft"
+    name = "NFT"
+    url = "/nft"
+    weight = 1
+  [[menu.main]]
+    identifier = "Roadmap"
+    name = "Roadmap"
+    url = "/roadmap"
+    weight = 2
+  [[menu.main]]
+    identifier = "Gallery"
+    name = "Gallery"
+    url = "/gallery"
+    weight = 3
+  [[menu.main]]
+    identifier = "Faq"
+    name = "FAQ"
+    url = "/faq"
+    weight = 4
+  [[menu.main]]
+    identifier = "RequestAccess"
+    name = "RequestAccess"
+    url = "/request-access"
+    weight = 5
+  [[menu.main]]
+      identifier = "SignIn"
+      name = "SignIn"
+      url = "/sign-in"
+      weight = 6
+  [[menu.main]]
+      identifier = "ForgotPassword"
+      name = "ForgotPassword"
+      url = "/forgot-password"
+      weight = 7
+
+  [outputs]
+    posts = ["json"]
+
+
+[sitemap]
+  filename = "sitemap.xml"
+  priority = 0.5
