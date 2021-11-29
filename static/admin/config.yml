@@ -14,15 +14,27 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 collections:
   - label: "Post" # Used in the UI
-    name: "post " # Used in routes, e.g., /admin/collections/blog
-    description: "post page"
+    name: "post" # Used in routes, e.g., /admin/collections/blog
+    # folder: "content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    files:
-      - label: "Companies Websites We Built"
-        name: "CompaniesWebsitesWeBuilt"
-        file: "data/home/companiessitsewebuilt.toml"
-        widget: "list"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Url, name: Url, widget: string}
-          - {label: thumbnailUrl, name: thumbnailUrl, widget: image}
+    file: "data/posts.json"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  #
+  #
+  # - label: "Post" # Used in the UI
+  #   name: "post " # Used in routes, e.g., /admin/collections/blog
+  #   description: "post page"
+  #   create: true # Allow users to create new documents in this collection
+  #   files:
+  #     - label: "Companies Websites We Built"
+  #       name: "CompaniesWebsitesWeBuilt"
+  #       widget: "list"
+  #       fields:
+  #         - {label: Title, name: title, widget: string}
+  #         - {label: Url, name: Url, widget: string}
+  #         - {label: thumbnailUrl, name: thumbnailUrl, widget: image}
