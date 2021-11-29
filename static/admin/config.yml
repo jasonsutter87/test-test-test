@@ -17,15 +17,12 @@ collections:
   label: "Settings"
   extension: "json"
   create: true # Allow users to create new documents in this collection
+  file: "data/posts.json"
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Url, name: Url, widget: string}
+    - {label: thumbnailUrl, name: thumbnailUrl, widget: image}
 
-  files:
-    - file: "data/posts.json"
-      label: "Navigation"
-      name: "navigation"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Url, name: Url, widget: string}
-        - {label: thumbnailUrl, name: thumbnailUrl, widget: image}
 
 
 
