@@ -1,4 +1,14 @@
 {
   "members": [
+    {
+      "name": "sdfgvjghk",
+      "image": {
+        "main": "/images/uploads/carne-asada-tacos-main-3-500x375.jpg",
+        "alt": "/images/uploads/carne-asada-tacos-main-3-500x375.jpg"
+      },
+      "position": "asdfg",
+      "bio": "sdfg",
+      "background": "sdfg"
+    }
   ]
 }
